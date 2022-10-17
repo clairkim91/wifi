@@ -1,0 +1,34 @@
+api:
+  url: http://openapi.seoul.go.kr:8088
+  name: TbPublicWifiInfo
+  key: 5665484f486e65623832534f515566
+  type: json
+  encoding: UTF-8
+
+work:
+  workCount: 15
+  timeUnit: 180
+
+db:
+  name: org.mariadb.jdbc.Driver
+  user: wifi
+  password: wnsah12
+  url: jdbc:mariadb://127.0.0.1:3306/wifiservice_mariadb
+
+
+dbPool:
+  poolName: wifi-service-db-pool
+  maxPoolSize: 20
+  minPoolSize: 20
+  poolValidMinDelay: 1000
+  maxIdleTime: 600
+  connTimeOut: 90
+  staticGlobal: false
+  useResetConnection: false
+  registerJmxPool: true
+
+logger:
+  path: ./wifi-service.log
+  encoding: UTF-8
+  limit: 52428800
+  count: 100
